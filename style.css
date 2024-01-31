@@ -313,3 +313,116 @@ header {
   position: absolute;
   left: 111px;
 }
+.product {
+  width: 1440px;
+  height: 591px;
+  background: #845ec2;
+  display: flex;
+  margin-top: 85px;
+}
+.product_text {
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #fff;
+  font-family: Montserrat;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: rgba(0, 0, 0, 0); /* Цвет текста */
+  -webkit-text-stroke: 0.5px #ffffff; /* Толщина и цвет обводки */
+}
+.product_bottom_left {
+  display: flex;
+
+  position: relative;
+  margin-top: 43px;
+}
+.product_top_left {
+}
+.product_left {
+  margin-left: 90px;
+  margin-top: 73px;
+  vertical-align: top;
+}
+.Our_product {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.product_headphones {
+  position: relative;
+  bottom: 71px;
+}
+.price_dollar {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.Price {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 112.903% */
+  position: absolute;
+  margin-top: 69px;
+  white-space: nowrap;
+}
+.product_right {
+  margin-left: 55px;
+}
+.Our_product {
+  margin-top: 146px;
+}
+.Product_lorem {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 166.667% */
+  width: 500.347px;
+  margin-top: 10px;
+}
+.button_add_to_cart {
+  border-radius: 10px;
+  background: #10b981;
+
+  box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.1);
+  width: 263.183px;
+  height: 70px;
+  margin-top: 35px;
+}
+.span_add_to_cart {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.span_view_more {
+  color: #fff;
+
+  font-family: Montserrat;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px; /* 166.667% */
+}
+.button_view_more {
+  margin: 0 auto;
+  margin-left: 49px;
+}
