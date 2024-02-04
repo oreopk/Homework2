@@ -3,16 +3,13 @@
   background: none;
   box-sizing: border-box;
   align-content: center;
-  margin: 0 auto;
-  padding: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 button {
   cursor: pointer;
 }
-body {
-  width: 1440px;
-  margin: 0 auto;
-}
+
 header {
   padding-top: 45px;
 }
@@ -47,7 +44,8 @@ header {
 }
 
 .container {
-  padding: 0px 85px 0 5px;
+  width: 1440px;
+  margin: 0 auto;
 }
 .header_content {
   display: flex;
@@ -148,11 +146,11 @@ header {
 
 .div_nav {
   margin-top: 65px;
-  margin-left: 460px;
   display: flex;
   align-items: center;
   gap: 75px;
   height: 81px;
+  justify-content: center;
 }
 
 .nav_a {
@@ -314,11 +312,12 @@ header {
   left: 111px;
 }
 .product {
-  width: 1440px;
   height: 591px;
   background: #845ec2;
-  display: flex;
   margin-top: 85px;
+}
+.prod {
+  display: flex;
 }
 .product_text {
   -webkit-text-stroke-width: 1;
@@ -329,16 +328,16 @@ header {
   font-weight: 600;
   line-height: normal;
   color: rgba(0, 0, 0, 0); /* Цвет текста */
-  -webkit-text-stroke: 0.5px #ffffff; /* Толщина и цвет обводки */
+  -webkit-text-stroke: 1px #ffffff;
 }
 .product_bottom_left {
   display: flex;
 
   position: relative;
   margin-top: 43px;
+  gap: 33px;
 }
-.product_top_left {
-}
+
 .product_left {
   margin-left: 90px;
   margin-top: 73px;
@@ -425,4 +424,168 @@ header {
 .button_view_more {
   margin: 0 auto;
   margin-left: 49px;
+}
+.sell_container {
+  margin-top: 121px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top_sellers_span {
+  color: #2b2626;
+
+  font-family: Montserrat;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.btn_top_picks {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: #10b981;
+  width: 177px;
+  height: 91px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+.a_watches {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-decoration: none;
+}
+.btns_sell {
+  margin-top: 55px;
+  align-items: center;
+
+  display: flex;
+  gap: 54px;
+}
+.topsell_headphoness {
+  margin-top: 92px;
+  display: flex;
+  gap: 93px;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+.headphones1_inside {
+  display: flex;
+  width: 361px;
+  height: 438px;
+  background: rgb(236, 254, 244);
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 18px;
+  gap: 15px;
+}
+.headphones2_inside {
+  display: flex;
+  width: 361px;
+  height: 438px;
+  background: rgb(236, 254, 244);
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 18px;
+  gap: 15px;
+}
+.headphones3_inside {
+  display: flex;
+  width: 361px;
+  height: 438px;
+  background: rgb(236, 254, 244);
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 18px;
+  gap: 15px;
+}
+.btn_add_sells {
+  margin-top: 29px;
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.1);
+  background: rgb(16, 185, 129);
+  width: 361px;
+  height: 70px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.img_sell1 {
+  width: 196px;
+  height: 196px;
+}
+.img_sell2 {
+  width: 241px;
+  height: 241px;
+}
+.img_sell3 {
+  width: 250px;
+  height: 250px;
+}
+.price_sell {
+  width: 319px;
+  height: 164px;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  padding-left: 52px;
+  padding-top: 31px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.p_price {
+  color: rgb(43, 38, 38);
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  width: 191px;
+  height: 35px;
+  white-space: nowrap;
+  margin: 0px;
+}
+.p_reviews {
+  color: rgb(136, 136, 136);
+  font-family: Montserrat;
+  font-size: 11px;
+  font-weight: 500;
+}
+.sell_rew {
+  margin-top: 11px;
+  display: flex;
+  gap: 13px;
+}
+.star_red {
+  margin: 0px;
+}
+
+.p_price_sell {
+  color: rgb(43, 38, 38);
+  font-family: Montserrat;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-top: 14px;
 }
