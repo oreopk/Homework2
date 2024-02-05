@@ -320,15 +320,14 @@ header {
   display: flex;
 }
 .product_text {
-  -webkit-text-stroke-width: 1;
-  -webkit-text-stroke-color: #fff;
-  font-family: Montserrat;
+  color: #845ec2;
+  font-family: Raleway;
   font-size: 60px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   line-height: normal;
-  color: rgba(0, 0, 0, 0); /* Цвет текста */
-  -webkit-text-stroke: 1px #ffffff;
+
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 .product_bottom_left {
   display: flex;
@@ -480,6 +479,7 @@ header {
   padding-right: 85px;
 }
 .headphones1_inside {
+  position: relative;
   display: flex;
   width: 361px;
   height: 438px;
@@ -492,6 +492,7 @@ header {
   gap: 15px;
 }
 .headphones2_inside {
+  position: relative;
   display: flex;
   width: 361px;
   height: 438px;
@@ -504,6 +505,7 @@ header {
   gap: 15px;
 }
 .headphones3_inside {
+  position: relative;
   display: flex;
   width: 361px;
   height: 438px;
@@ -588,4 +590,38 @@ header {
   letter-spacing: 0%;
   text-align: left;
   margin-top: 14px;
+}
+.skidka {
+  position: absolute;
+  background-color: #10b981;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 13px;
+  right: 19px;
+}
+.p_skidka {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: rgb(255, 255, 255);
+}
+.skidka40 {
+  position: absolute;
+  background-color: #845ec2;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 13px;
+  right: 19px;
 }
