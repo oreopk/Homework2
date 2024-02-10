@@ -644,12 +644,6 @@ header {
   right: 19px;
 }
 
-@media (max-width: 360px) {
-  .header_content {
-    background-color: red;
-  }
-}
-
 @media (max-width: 1140px) {
   .header_content {
     gap: 0px;
