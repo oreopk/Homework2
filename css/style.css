@@ -66,7 +66,7 @@ header {
 }
 .search::after {
   content: '';
-  background-image: url('./svg/search.svg');
+  background-image: url('../svg/search.svg');
   background-repeat: no-repeat;
   width: 38px;
   height: 38px;
@@ -118,7 +118,7 @@ header {
 }
 .span_add::before {
   content: '';
-  background-image: url('./svg/Shopping-bag.svg');
+  background-image: url('../svg/Shopping-bag.svg');
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -171,7 +171,7 @@ header {
 }
 .span_login::before {
   content: '';
-  background-image: url('./svg/Profile\ 1.svg');
+  background-image: url('../svg/Profile\ 1.svg');
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -672,8 +672,6 @@ header {
   .button_login {
     margin-left: 0px;
     min-width: 180px;
-  }
-  .logo_button {
   }
   .span_login {
     padding-left: 0px;
