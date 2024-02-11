@@ -1,3 +1,18 @@
+$color_1: #10b981;
+$color_2: #000;
+$color_3: var(--Text-20, rgba(41, 41, 48, 0.2));
+$color_4: #2b2626;
+$color_5: #fff;
+$color_6: #845ec2;
+$color_7: rgb(0, 0, 0);
+$color_8: rgb(255, 255, 255);
+$color_9: rgb(43, 38, 38);
+$color_10: rgb(136, 136, 136);
+$font-family_1: Montserrat;
+$font-family_2: Raleway;
+$background-color_1: #10b981;
+$background-color_2: #845ec2;
+
 * {
   border: none;
   background: none;
@@ -9,32 +24,26 @@
 button {
   cursor: pointer;
 }
-
 header {
   padding-top: 45px;
 }
 .logo_button {
-  color: #10b981;
-
-  font-family: Montserrat;
+  color: $color_1;
+  font-family: $font-family_1;
   font-size: 40px;
   font-style: italic;
   font-weight: 400;
   line-height: normal;
-
   margin: 0;
   margin-left: 85px;
   padding: 0;
   text-decoration: none;
-}
-.logo_button {
   position: relative;
-
   height: 63px;
 }
 .logo_button_span {
-  color: #000;
-  font-family: Montserrat;
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 40px;
   font-style: italic;
   font-weight: 400;
@@ -42,7 +51,6 @@ header {
   margin: 0;
   padding: 0;
 }
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -51,51 +59,46 @@ header {
 }
 .header_content {
   display: flex;
-
   align-items: center;
-  /*  justify-content: space-between;*/
 }
-
 .search {
   width: 290px;
   min-width: 200px;
   position: relative;
   margin-right: 38px;
   margin-left: 10%;
-}
-.search::after {
-  content: '';
-  background-image: url('./svg/search.svg');
-  background-repeat: no-repeat;
-  width: 38px;
-  height: 38px;
-  background-color: #10b981;
-  position: absolute;
-  right: 18px;
-  top: 12px;
-  border-radius: 5px;
-  background-position: center;
+  &::after {
+    content: '';
+    background-image: url('./svg/search.svg');
+    background-repeat: no-repeat;
+    width: 38px;
+    height: 38px;
+    background-color: $background-color_1;
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    border-radius: 5px;
+    background-position: center;
+  }
 }
 .search_input {
   display: block;
   width: 100%;
   height: 63px;
   padding: 1px 60px 2px 32px;
-  font-family: Montserrat;
+  font-family: $font-family_1;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 60px; /* 375% */
+  line-height: 60px;
   outline: none;
   border-radius: 10px;
   background: #fff;
-
   box-shadow: 0px 15px 50px 0px rgba(46, 131, 158, 0.07);
+  &::placeholder {
+    color: $color_3;
+  }
 }
-.search_input::placeholder {
-  color: var(--Text-20, rgba(41, 41, 48, 0.2));
-}
-
 .button_add {
   width: 229px;
   height: 60px;
@@ -103,30 +106,28 @@ header {
   border: 1px solid #10b981;
   position: relative;
   box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
-  color: #2b2626;
-
-  font-family: Montserrat;
+  color: $color_4;
+  font-family: $font-family_1;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 50px; /* 375% */
+  line-height: 50px;
   margin-right: 1%;
 }
 .span_add {
   margin-left: 35px;
+  &::before {
+    content: '';
+    background-image: url('./svg/Shopping-bag.svg');
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 30px;
+    top: 17px;
+    border-radius: 5px;
+  }
 }
-.span_add::before {
-  content: '';
-  background-image: url('./svg/Shopping-bag.svg');
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 30px;
-  top: 17px;
-  border-radius: 5px;
-}
-
 .button_login {
   width: 247px;
   height: 60px;
@@ -134,20 +135,17 @@ header {
   background: #10b981;
   position: relative;
   box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.1);
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 60px; /* 375% */
+  line-height: 60px;
 }
-
 .nav_menu {
   background: #10b981;
   height: 81px;
 }
-
 .div_nav {
   margin-top: 65px;
   display: flex;
@@ -156,53 +154,47 @@ header {
   height: 81px;
   justify-content: center;
 }
-
 .nav_a {
-  color: #fff;
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   text-decoration: none;
-
   margin: 0;
 }
-.span_login::before {
-  content: '';
-  background-image: url('./svg/Profile\ 1.svg');
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 35px;
-  top: 19px;
-  border-radius: 5px;
-}
 .span_login {
+  &::before {
+    content: '';
+    background-image: url('./svg/Profile\ 1.svg');
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 35px;
+    top: 19px;
+    border-radius: 5px;
+  }
   padding-left: 25px;
 }
 .top {
   display: flex;
 }
 .top_left_text {
-  color: #2b2626;
-
-  font-family: Montserrat;
-  font-size: 64px;
-  font-style: normal;
+  color: $color_4;
+  font-size: 3.5rem !important;
+  font-family: $font-family_1;
   font-weight: 600;
-  line-height: normal;
   margin-top: 126px;
 }
 .top_left_text_bot {
-  color: #2b2626;
-
-  font-family: Montserrat;
+  color: $color_4;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 35px; /* 166.667% */
+  line-height: 35px;
   margin-top: 30px;
 }
 .button_buy_now {
@@ -210,14 +202,12 @@ header {
   height: 70px;
   border-radius: 10px;
   background: #10b981;
-
   box-shadow: 0px 25px 50px 0px rgba(132, 94, 194, 0.15);
   margin-top: 52px;
 }
 .span_buy_now {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
@@ -265,14 +255,14 @@ header {
 }
 .play_video_button_text {
   position: absolute;
-  color: #2b2626;
+  color: $color_4;
   top: 75px;
   left: -15px;
-  font-family: Montserrat;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 35px; /* 166.667% */
+  line-height: 35px;
   white-space: nowrap;
 }
 .play_video_icn2 {
@@ -288,21 +278,18 @@ header {
 .span_div_reviews {
   padding-left: 186px;
 }
-
 .rew_icns {
   display: inline-block;
   position: relative;
 }
 .span_reviews {
-  color: #2b2626;
-
-  font-family: Montserrat;
+  color: $color_4;
+  font-family: $font-family_1;
   font-size: 26px;
   font-style: normal;
   font-weight: 500;
-  line-height: 35px; /* 134.615% */
+  line-height: 35px;
 }
-
 .rew_icn1 {
   position: absolute;
 }
@@ -327,58 +314,53 @@ header {
   display: flex;
 }
 .product_text {
-  color: #845ec2;
-  font-family: Raleway;
+  color: $color_6;
+  font-family: $font-family_2;
   font-size: 60px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 .product_bottom_left {
   display: flex;
-
   position: relative;
   margin-top: 43px;
   gap: 33px;
 }
-
 .product_left {
   margin-left: 90px;
   margin-top: 73px;
   vertical-align: top;
 }
 .Our_product {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 44px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-top: 146px;
 }
 .product_headphones {
   position: relative;
   bottom: 71px;
 }
 .price_dollar {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 31px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .Price {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 31px;
   font-style: normal;
   font-weight: 400;
-  line-height: 35px; /* 112.903% */
+  line-height: 35px;
   position: absolute;
   margin-top: 69px;
   white-space: nowrap;
@@ -387,24 +369,19 @@ header {
   margin-left: 55px;
   padding-right: 30px;
 }
-.Our_product {
-  margin-top: 146px;
-}
 .Product_lorem {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 500;
-  line-height: 35px; /* 166.667% */
+  line-height: 35px;
   max-width: 500.347px;
   margin-top: 10px;
 }
 .button_add_to_cart {
   border-radius: 10px;
   background: #10b981;
-
   box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.1);
   width: 263.183px;
   height: 70px;
@@ -412,22 +389,20 @@ header {
   margin-bottom: 30px;
 }
 .span_add_to_cart {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
 .span_view_more {
-  color: #fff;
-
-  font-family: Montserrat;
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 21px;
   font-style: normal;
   font-weight: 600;
-  line-height: 35px; /* 166.667% */
+  line-height: 35px;
 }
 .button_view_more {
   margin: 0 auto;
@@ -439,11 +414,9 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
 .top_sellers_span {
-  color: #2b2626;
-
-  font-family: Montserrat;
+  color: $color_4;
+  font-family: $font-family_1;
   font-size: 44px;
   font-weight: 600;
   line-height: 54px;
@@ -451,7 +424,7 @@ header {
   text-align: left;
 }
 .btn_top_picks {
-  font-family: Montserrat;
+  font-family: $font-family_1;
   font-size: 26px;
   font-weight: 600;
   line-height: 32px;
@@ -461,12 +434,12 @@ header {
   width: 177px;
   height: 91px;
   border-radius: 50%;
-  color: #fff;
+  color: $color_5;
   text-decoration: none;
 }
 .a_watches {
-  color: rgb(0, 0, 0);
-  font-family: Montserrat;
+  color: $color_7;
+  font-family: $font-family_1;
   font-size: 26px;
   font-weight: 600;
   line-height: 32px;
@@ -476,7 +449,6 @@ header {
 .btns_sell {
   margin-top: 55px;
   align-items: center;
-
   display: flex;
   gap: 54px;
 }
@@ -540,10 +512,9 @@ header {
   box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.1);
   background: rgb(16, 185, 129);
   width: 100%;
-
   height: 70px;
-  color: rgb(255, 255, 255);
-  font-family: Montserrat;
+  color: $color_8;
+  font-family: $font-family_1;
   font-size: 21px;
   font-weight: 600;
   line-height: 26px;
@@ -574,8 +545,8 @@ header {
   justify-content: start;
 }
 .p_price {
-  color: rgb(43, 38, 38);
-  font-family: Montserrat;
+  color: $color_9;
+  font-family: $font-family_1;
   font-size: 21px;
   font-weight: 500;
   letter-spacing: 0%;
@@ -585,8 +556,8 @@ header {
   margin: 0px;
 }
 .p_reviews {
-  color: rgb(136, 136, 136);
-  font-family: Montserrat;
+  color: $color_10;
+  font-family: $font-family_1;
   font-size: 11px;
   font-weight: 500;
 }
@@ -598,10 +569,9 @@ header {
 .star_red {
   margin: 0px;
 }
-
 .p_price_sell {
-  color: rgb(43, 38, 38);
-  font-family: Montserrat;
+  color: $color_9;
+  font-family: $font-family_1;
   font-size: 21px;
   font-weight: 600;
   line-height: 26px;
@@ -611,7 +581,7 @@ header {
 }
 .skidka {
   position: absolute;
-  background-color: #10b981;
+  background-color: $background-color_1;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -623,16 +593,16 @@ header {
   right: 19px;
 }
 .p_skidka {
-  font-family: Montserrat;
+  font-family: $font-family_1;
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: 0%;
-  color: rgb(255, 255, 255);
+  color: $color_8;
 }
 .skidka40 {
   position: absolute;
-  background-color: #845ec2;
+  background-color: $background-color_2;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -643,7 +613,6 @@ header {
   top: 13px;
   right: 19px;
 }
-
 @media (max-width: 1140px) {
   .header_content {
     gap: 0px;
@@ -659,10 +628,10 @@ header {
   }
   .span_add {
     margin-left: 0px;
-  }
-  .span_add::before {
-    display: none;
-    visibility: hidden;
+    &::before {
+      display: none;
+      visibility: hidden;
+    }
   }
   .button_add {
     margin-left: 0px;
@@ -672,17 +641,14 @@ header {
     margin-left: 0px;
     min-width: 180px;
   }
-  .logo_button {
-  }
   .span_login {
     padding-left: 0px;
-  }
-  .span_login::before {
-    display: none;
+    &::before {
+      display: none;
+    }
   }
   .top_left {
     display: flex;
-
     align-content: center;
     align-items: center;
     align-self: center;
@@ -698,6 +664,7 @@ header {
     flex-direction: column;
   }
   .product_left {
+    margin-left: 0px;
     align-self: center;
   }
   .product_right {
@@ -718,13 +685,13 @@ header {
     order: 1;
     padding-top: 15px;
     flex-grow: 1;
+    &::after {
+      position: absolute;
+      top: 25px;
+    }
   }
   .search_input {
     width: 100%;
-  }
-  .search::after {
-    position: absolute;
-    top: 25px;
   }
   .top-right {
     display: none;
@@ -732,15 +699,14 @@ header {
   }
   .span_add {
     margin-left: 0px;
-  }
-  .span_add::before {
-    display: none;
-    visibility: hidden;
+    &::before {
+      display: none;
+      visibility: hidden;
+    }
   }
   .button_add {
     margin-top: 10px;
     width: auto;
-
     margin-left: 0px;
     margin-left: 15px;
     align-self: end;
@@ -755,6 +721,7 @@ header {
     height: auto;
     flex-grow: 1;
     width: 100%;
+    margin-left: 30px;
   }
   .logo_button_span {
     font-size: 2rem;
@@ -763,7 +730,6 @@ header {
     padding-left: 0px;
     text-align: center;
   }
-
   .top_left {
     display: flex;
     padding-left: 30px;
@@ -789,15 +755,11 @@ header {
   }
   .product_right {
     text-align: center;
-
     align-self: center;
     padding-bottom: 30px;
     align-content: end;
     align-items: end;
     justify-content: end;
-  }
-  .logo_button {
-    margin-left: 30px;
   }
   .div_nav {
     margin-top: 25px;
@@ -822,7 +784,6 @@ header {
     padding-top: 40px;
     gap: 5px;
   }
-
   .headphones {
     width: 70%;
   }
@@ -830,7 +791,6 @@ header {
     flex-direction: column;
     align-items: center;
   }
-
   .Price {
     display: none;
     visibility: hidden;
