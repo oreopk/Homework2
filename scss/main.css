@@ -508,55 +508,50 @@ header {
   max-width: 1440px;
   width: 100%;
   gap: 5px;
+  position: relative;
 }
 
 .headphones {
   min-width: 200px;
   width: 361px;
-  height: 438px;
 }
 
 .inside {
-  min-height: 438px;
+  position: relative;
+  display: flex;
+  min-height: 448px;
+  height: auto;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 18px;
+  padding-left: 21px;
+  padding-right: 21px;
 }
 
 .headphones1_inside {
-  position: relative;
-  display: flex;
-  height: 100%;
   background: rgb(236, 254, 244);
-  border-radius: 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  padding-bottom: 18px;
-  gap: 15px;
 }
 
 .headphones2_inside {
-  height: 100%;
-  position: relative;
-  display: flex;
   background: rgb(236, 254, 244);
-  border-radius: 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  padding-bottom: 18px;
-  gap: 15px;
 }
 
 .headphones3_inside {
-  height: 100%;
-  position: relative;
-  display: flex;
   background: rgb(236, 254, 244);
-  border-radius: 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  padding-bottom: 18px;
-  gap: 15px;
+}
+
+.headphones4_inside {
+  background: rgb(224, 239, 255);
+}
+
+.headphones5_inside {
+  background: rgb(232, 249, 255);
+}
+
+.headphones6_inside {
+  background: rgb(211, 251, 251);
 }
 
 .btn_add_sells {
@@ -591,12 +586,14 @@ header {
 }
 
 .price_sell {
-  width: 319px;
+  width: 100%;
   height: 164px;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   padding-left: 52px;
   padding-top: 31px;
+  margin-left: 21px;
+  margin-right: 21px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -608,10 +605,10 @@ header {
   font-size: 21px;
   font-weight: 500;
   letter-spacing: 0%;
-  width: 191px;
-  height: 35px;
-  white-space: nowrap;
+  width: 100%;
+  white-space: wrap;
   margin: 0px;
+  padding-bottom: 11px;
 }
 
 .p_reviews {
@@ -628,7 +625,7 @@ header {
 }
 
 .star_red {
-  margin: 0px;
+  min-width: 101px;
 }
 
 .p_price_sell {
@@ -679,7 +676,42 @@ header {
   right: 19px;
 }
 
+.skidka402 {
+  position: absolute;
+  background-color: rgb(8, 189, 190);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 13px;
+  right: 19px;
+}
+
+.Arrow {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  top: 190px;
+  right: 10px;
+  position: absolute;
+}
+
 @media (max-width: 1140px) {
+  .price_sell {
+    padding-left: 12px;
+    padding-top: 11px;
+    margin-left: 21px;
+    margin-right: 21px;
+    padding-bottom: 10px;
+    height: auto;
+  }
+  .sell_rew {
+    flex-wrap: wrap;
+  }
   .header_content {
     gap: 0px;
   }
