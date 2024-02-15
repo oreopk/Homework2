@@ -140,6 +140,7 @@ header {
   font-style: normal;
   font-weight: 500;
   line-height: 60px;
+  margin-right: 15px;
 }
 
 .nav_menu {
@@ -406,6 +407,14 @@ header {
   padding-right: 30px;
 }
 
+.add {
+  display: flex;
+  -moz-column-gap: 49px;
+       column-gap: 49px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .Product_lorem {
   color: #fff;
   font-family: Montserrat;
@@ -443,11 +452,6 @@ header {
   font-style: normal;
   font-weight: 600;
   line-height: 35px;
-}
-
-.button_view_more {
-  margin: 0 auto;
-  margin-left: 49px;
 }
 
 .sell_container {
@@ -697,11 +701,12 @@ header {
   }
   .header_content {
     gap: 0px;
+    margin: 10px;
   }
   .search {
-    margin-left: 40px;
     min-width: 160px;
-    margin-right: 5px;
+    margin-right: 5%;
+    margin-left: 5%;
   }
   .top-right {
     display: none;
@@ -761,6 +766,11 @@ header {
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
+  .product_right {
+    margin-left: 55px;
+    margin-right: 55px;
+    padding-right: 0px;
+  }
   .search {
     width: 50%;
     order: 1;
@@ -796,6 +806,7 @@ header {
     width: auto;
     margin-top: 15px;
     margin-left: 0px;
+    margin-right: 0px;
   }
   .logo_button {
     font-size: 2rem;
@@ -831,8 +842,7 @@ header {
   }
   .product_left {
     align-self: center;
-    margin-left: 55px;
-    padding-right: 30px;
+    margin: 0 10px 0 10px;
   }
   .product_right {
     text-align: center;
@@ -879,6 +889,7 @@ header {
   .product_text {
     text-align: center;
     font-size: 3rem;
+    margin-top: 30px;
   }
   .skidka {
     height: 70px;
@@ -908,5 +919,8 @@ header {
   }
   .top_sellers_span {
     text-align: center;
+  }
+  .button_view_more {
+    margin: 0px;
   }
 }/*# sourceMappingURL=main.css.map */
