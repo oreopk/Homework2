@@ -574,19 +574,6 @@ header {
   text-align: left;
   margin-top: 14px;
 }
-.skidka {
-  position: absolute;
-  background-color: $background-color_1;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  top: 13px;
-  right: 19px;
-}
 .p_skidka {
   font-family: $font-family_1;
   font-size: 18px;
@@ -595,9 +582,8 @@ header {
   letter-spacing: 0%;
   color: $color_8;
 }
-.skidka40 {
+.skidka {
   position: absolute;
-  background-color: $background-color_2;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -608,18 +594,14 @@ header {
   top: 13px;
   right: 19px;
 }
+.skidka60 {
+  background-color: $background-color_1;
+}
+.skidka40 {
+  background-color: $background-color_2;
+}
 .skidka402 {
-  position: absolute;
   background-color: rgb(8, 189, 190);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  top: 13px;
-  right: 19px;
 }
 .Arrow {
   align-content: center;
@@ -833,10 +815,6 @@ header {
     height: 70px;
     width: 70px;
   }
-  .skidka40 {
-    height: 70px;
-    width: 70px;
-  }
   .p_skidka {
     font-size: 15px;
   }
@@ -850,9 +828,17 @@ header {
   }
   .btns_sell {
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .btn_add_sells {
     display: none;
     visibility: hidden;
+  }
+  .sell_container {
+    padding: 0 10px 0 10px;
+  }
+  .top_sellers_span {
+    text-align: center;
   }
 }
