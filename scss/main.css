@@ -705,8 +705,8 @@ header {
   }
   .search {
     min-width: 160px;
-    margin-right: 5%;
     margin-left: 5%;
+    margin-right: 1%;
   }
   .top-right {
     display: none;
