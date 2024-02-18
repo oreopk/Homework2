@@ -909,10 +909,11 @@ header {
 }
 
 .email {
-  margin-top: 20px;
+  margin-top: 30px;
   width: 289px;
   min-width: 200px;
   position: relative;
+  height: 51px;
 }
 .email::after {
   content: "";
@@ -923,7 +924,7 @@ header {
   background-color: #10b981;
   position: absolute;
   right: 0px;
-  top: 12px;
+  top: 0px;
   border-radius: 5px 5px 0 0;
   background-position: center;
 }
@@ -931,7 +932,7 @@ header {
 .email_input {
   display: block;
   width: 100%;
-  height: 63px;
+  height: 51px;
   padding: 1px 60px 2px 0;
   font-family: Montserrat;
   font-size: 16px;
@@ -943,16 +944,28 @@ header {
   border-bottom: 1px solid rgba(83, 60, 60, 0.11);
 }
 .email_input::-moz-placeholder {
-  color: var(--Text-20, rgba(41, 41, 48, 0.2));
+  color: rgb(17, 17, 17);
+  font-family: DM Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  text-align: left;
 }
 .email_input::placeholder {
-  color: var(--Text-20, rgba(41, 41, 48, 0.2));
+  color: rgb(17, 17, 17);
+  font-family: DM Sans;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  text-align: left;
 }
 
 .other {
   display: flex;
   justify-content: start;
-  margin: 0 185px 0 185px;
+  margin: 0 274px 0 185px;
   gap: 14%;
 }
 
@@ -1013,6 +1026,29 @@ header {
 }
 
 @media (max-width: 1140px) {
+  .last {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .other {
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .get_started {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .starter_btn {
+    margin: 0px;
+    margin-bottom: 20px;
+  }
   .add_new {
     justify-content: center;
     flex-wrap: wrap;
