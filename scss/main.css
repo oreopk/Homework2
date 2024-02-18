@@ -1025,6 +1025,13 @@ header {
   text-align: left;
 }
 
+.all_navs {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
 @media (max-width: 1140px) {
   .last {
     flex-wrap: wrap;
@@ -1032,11 +1039,11 @@ header {
     justify-content: center;
   }
   .other {
-    justify-content: center;
     flex-wrap: wrap;
     row-gap: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    justify-content: center;
   }
   .get_started {
     flex-wrap: wrap;
