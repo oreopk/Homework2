@@ -11,7 +11,7 @@ button {
   cursor: pointer;
 }
 
-header {
+.header {
   padding-top: 45px;
 }
 
@@ -1222,6 +1222,7 @@ header {
   }
   .mobile-menu {
     display: flex;
+    justify-content: start;
   }
 }
 @media (max-width: 768px) {
@@ -1238,6 +1239,7 @@ header {
   }
   .nav_menu {
     display: none;
+    visibility: hidden;
   }
   .neww {
     flex-wrap: wrap;
