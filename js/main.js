@@ -35,16 +35,12 @@ function scrollToSection(event) {
         mobileMenu.classList.remove('visible');
         mobileMenu.classList.add('hidden');
       case 'Blog':
-        links.topsell.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'nearest',
-        });
+        links.topsell.scrollIntoView();
         console.log(links.topsell);
         mobileMenu.classList.remove('visible');
         mobileMenu.classList.add('hidden');
-      case 'new':
-        links.product.scrollIntoView();
+      case 'About':
+        links.new_.scrollIntoView();
         mobileMenu.classList.remove('visible');
         mobileMenu.classList.add('hidden');
     }
