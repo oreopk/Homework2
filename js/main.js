@@ -1,11 +1,11 @@
 const mobileMenu = document.querySelector('.mobile-menu');
 const header = document.querySelector('.header');
-
-const product = document.querySelector('#product');
-const topsell = document.querySelector('#top_sell');
-const trend = document.querySelector('#trend');
-const new_ = document.querySelector('#new');
-
+const links = {
+  product: document.querySelector('#product'),
+  topsell: document.querySelector('#top_sell'),
+  trend: document.querySelector('#trend'),
+  new_: document.querySelector('#new'),
+};
 document.querySelector('.menu_button').addEventListener('click', (event) => {
   mobileMenu.classList.remove('hidden');
   mobileMenu.classList.add('visible');
@@ -24,8 +24,6 @@ function scrollToSection(event) {
     switch (console.log(content)) {
       case '#product':
         link.products.scrollIntoView();
-        mobileMenu.classList.remove('visible');
-        mobileMenu.classList.add('hidden');
       case 'Products':
         link.products.scrollIntoView();
       case 'Blog':
