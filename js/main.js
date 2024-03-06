@@ -23,13 +23,15 @@ function scrollToSection(event) {
   if (classes.includes('nav_a')) {
     switch (console.log(content)) {
       case '#product':
-        link.products.scrollIntoView();
-      case 'Products':
-        link.products.scrollIntoView();
-      case 'Blog':
-        link.products.scrollIntoView();
+        links.product.scrollIntoView();
+        mobileMenu.classList.remove('visible');
+        mobileMenu.classList.add('hidden');
+      case 'product':
+        links.topsell.scrollIntoView();
+      case '#product':
+        links.trend.scrollIntoView();
       case 'new':
-        link.products.scrollIntoView();
+        links.product.scrollIntoView();
     }
   }
 }
