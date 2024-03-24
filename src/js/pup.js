@@ -1,9 +1,11 @@
 const popup = document.createElement('section');
 const WELCOME_POPUP_KEY = 'WELCOME_POPUP_KEY';
 
-const isShowWelcomePopup = JSON.parse(localStorage.getItem(WELCOME_POPUP_KEY)); // true/false
+export const isShowWelcomePopup = JSON.parse(
+  localStorage.getItem(WELCOME_POPUP_KEY)
+); // true/false
 
-function showWelcomePopup() {
+export function showWelcomePopup() {
   const content = `
                 <!-- welcome popup -->
                 
@@ -27,10 +29,6 @@ function showWelcomePopup() {
     popup.replaceWith('');
     document.body.style.overflow = 'auto';
   });
-}
-
-if (!isShowWelcomePopup) {
-  setTimeout(showWelcomePopup, 3000);
 }
 
 //localStorage.clear();

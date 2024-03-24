@@ -1,4 +1,4 @@
-const cardInfoTopPicksList = [
+export const cardInfoTopPicksList = [
   {
     image: 'image 14.png',
     cardTitle: 'Безпроводные наушники №1',
@@ -18,7 +18,7 @@ const cardInfoTopPicksList = [
     price: 123,
   },
 ];
-const cardInfoWatchesList = [
+export const cardInfoWatchesList = [
   {
     image: 'image 15.png',
     cardTitle: 'Безпроводные наушники №456',
@@ -52,18 +52,23 @@ const cardInfoWatchesList = [
 // mobilemenu.after(div)
 // mobilemenu.replaceWith(div)
 
-const sellersTabCardWrapper = document
-  .querySelector('.main')
+export const sellersTabCardWrapper = document
+  .querySelector('.top-sell')
   .querySelectorAll('.topsell_headphoness');
 // const earphonesTabCardWrapper = document
 //   .querySelector('.earphones')
 //   .querySelector('.tab__card-wrapper');
+export const sellersTabCardWrapper2 = document
+  .querySelector('.trend')
+  .querySelectorAll('.topsell_headphoness');
 
-const sellersTabBtnWrapper = document
-  .querySelector('main')
+export const sellersTabBtnWrapper = document
+  .querySelector('.top-sell')
   .querySelectorAll('.btns_sell');
-
-function getCards(cardInfoList, elem) {
+export const sellersTabBtnWrapper2 = document
+  .querySelector('.trend')
+  .querySelectorAll('.btns_sell');
+export function getCards(cardInfoList, elem) {
   const arr = cardInfoList.forEach((cardInfo) => {
     const tab = `<div class="headphones">
     <div class="headphones1_inside inside">
@@ -92,56 +97,13 @@ function getCards(cardInfoList, elem) {
   });
 }
 
-function deletetab() {
-  const tabs = document.querySelector('.trend').querySelectorAll('.headphones');
+export function deletetab(m) {
+  const tabs = document.querySelector(`.${m}`).querySelectorAll('.headphones');
   // console.log(tabs);
-  for (x of tabs) {
+  for (let x of tabs) {
     x.remove();
   }
 }
-f = sellersTabBtnWrapper[1];
-f.addEventListener('click', (event) => {
-  const target = event.target;
-
-  const ovalButtons = f.querySelectorAll('.btn_top_picks');
-
-  ovalButtons.forEach((btn) => {
-    btn.classList.remove('active');
-  });
-  console.log(target.nodeName);
-  if (target.nodeName == 'BUTTON') {
-    target.classList.add('active');
-    // sellersTabCardWrapper.replaceWith('')
-  }
-  if (target.innerText == 'Watches') {
-    deletetab();
-    getCards(cardInfoTopPicksList, sellersTabCardWrapper[1]);
-  } else {
-    deletetab();
-    getCards(cardInfoWatchesList, sellersTabCardWrapper[1]);
-  }
-});
-
-f1 = sellersTabBtnWrapper[0];
-f1.addEventListener('click', (event) => {
-  const target = event.target;
-
-  const ovalButtons = f1.querySelectorAll('.btn_top_picks');
-
-  ovalButtons.forEach((btn) => {
-    btn.classList.remove('active');
-  });
-  console.log(target.nodeName);
-  if (target.nodeName == 'BUTTON') {
-    target.classList.add('active');
-    // sellersTabCardWrapper.replaceWith('')
-  }
-  if (target.innerText == 'Watches') {
-    getCards(cardInfoTopPicksList, sellersTabCardWrapper[0]);
-  } else {
-    getCards(cardInfoWatchesList, sellersTabCardWrapper[0]);
-  }
-});
 
 //etCards(cardInfoTopPicksList, sellersTabCardWrapper);
 // getCards(cardInfoList,earphonesTabCardWrapper)

@@ -1,52 +1,43 @@
-const getCards = require('./js/tab');
-const mobileMenu = document.querySelector('.mobile-menu');
-const header = document.querySelector('.header');
-const links = {
-  features: document.querySelector('#features'),
-  product: document.querySelector('#product'),
-  topsell: document.querySelector('#top_sell'),
-  new_: document.querySelector('#new'),
-};
-document.querySelector('.menu_button').addEventListener('click', (event) => {
-  mobileMenu.classList.remove('hidden');
-  mobileMenu.classList.add('visible');
-});
-
-mobileMenu
-  .querySelector('.mobile-menu__close')
-  .addEventListener('click', (event) => {
-    mobileMenu.classList.remove('visible');
-    mobileMenu.classList.add('hidden');
-  });
-
-function scrollToSection(event) {
-  const classes = event.target.className;
-  // console.log(event.target);
-  if (classes.includes('nav_a1')) {
-    const content = event.target.innerText;
-
-    //  console.log(content);
-    switch (content) {
-      case 'Features':
-        links.features.scrollIntoView();
-        mobileMenu.classList.remove('visible');
-        mobileMenu.classList.add('hidden');
-      case 'Product':
-        links.product.scrollIntoView();
-        mobileMenu.classList.remove('visible');
-        mobileMenu.classList.add('hidden');
-      case 'Blog':
-        links.topsell.scrollIntoView();
-        console.log(links.topsell);
-        mobileMenu.classList.remove('visible');
-        mobileMenu.classList.add('hidden');
-      case 'About':
-        links.new_.scrollIntoView();
-        mobileMenu.classList.remove('visible');
-        mobileMenu.classList.add('hidden');
-    }
-  }
+import { isShowWelcomePopup, showWelcomePopup } from './js/pup.js';
+import {
+  cardInfoTopPicksList,
+  cardInfoWatchesList,
+  sellersTabCardWrapper,
+  sellersTabCardWrapper2,
+  sellersTabBtnWrapper,
+  sellersTabBtnWrapper2,
+  getCards,
+  deletetab,
+} from './js/tab.js';
+import scss from './scss/main.scss';
+import { menu } from './js/menu.js';
+menu();
+//const getCards = require('./js/tab');
+if (!isShowWelcomePopup) {
+  setTimeout(showWelcomePopup, 3000);
 }
+console.log(sellersTabBtnWrapper);
+console.log(sellersTabBtnWrapper2);
 
-mobileMenu.addEventListener('click', scrollToSection);
-header.addEventListener('click', scrollToSection);
+let f = sellersTabBtnWrapper[0];
+f.addEventListener('click', (event) => {
+  const target = event.target;
+
+  const ovalButtons = f.querySelectorAll('.btn_top_picks');
+
+  ovalButtons.forEach((btn) => {
+    btn.classList.remove('active');
+  });
+  console.log(target.nodeName);
+  if (target.nodeName == 'BUTTON') {
+    target.classList.add('active');
+    // sellersTabCardWrapper.replaceWith('')
+  }
+  if (target.innerText == 'Watches') {
+    deletetab('top-sell');
+    getCards(cardInfoTopPicksList, sellersTabCardWrapper[0]);
+  } else {
+    deletetab('top-sell');
+    getCards(cardInfoWatchesList, sellersTabCardWrapper[0]);
+  }
+});

@@ -15,5 +15,18 @@ module.exports = (env) => {
         template: path.resolve(__dirname, 'public', 'index.html'),
       }),
     ],
+
+    module: {
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
+    devServer: {
+      port: env.port || 3000,
+      open: true,
+    },
   };
 };

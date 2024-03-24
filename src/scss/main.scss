@@ -185,11 +185,12 @@ button {
   margin-right: 15px;
 }
 .nav_menu {
+  margin-top: 30px;
   background: #10b981;
   height: 81px;
 }
 .div_nav {
-  margin-top: 65px;
+  // margin-top: 65px;
   display: flex;
   align-items: center;
   gap: 75px;
@@ -351,6 +352,7 @@ button {
   height: 591px;
   background: #845ec2;
   margin-top: 85px;
+  padding-bottom: 30px;
   justify-content: center;
   align-content: center;
   align-items: center;
