@@ -10,13 +10,13 @@ import {
   deletetab,
 } from './js/tab.js';
 import scss from './scss/main.scss';
-//import { menu } from './js/menu.js';
+import { menu } from './js/menu.js';
 import Header from './js/sections/header.js';
 
 const header = new Header('header');
 header.setTemplate();
 header.createHeader('body');
-//menu();
+menu();
 //const getCards = require('./js/tab');
 if (!isShowWelcomePopup) {
   setTimeout(showWelcomePopup, 3000);

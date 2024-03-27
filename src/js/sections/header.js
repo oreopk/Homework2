@@ -50,7 +50,7 @@ class Header extends ElemHTML {
     console.log('PROVERKA');
   }
   createHeader() {
-    this.render();
+    this.render('body');
   }
 }
 
