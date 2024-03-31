@@ -1,24 +1,4 @@
-export const cardInfoTopPicksList = [
-  {
-    image: 'image 14.png',
-    cardTitle: 'Безпроводные наушники №1',
-    reviews: 100,
-    price: 32,
-  },
-  {
-    image: 'image 13.png',
-    cardTitle: 'Безпроводные наушники №2',
-    reviews: 130,
-    price: 95,
-  },
-  {
-    image: 'image 12.png',
-    cardTitle: 'Безпроводные наушники №3',
-    reviews: 88,
-    price: 123,
-  },
-];
-export const cardInfoWatchesList = [
+const cardInfoWatchesList = [
   {
     image: 'image 15.png',
     cardTitle: 'Безпроводные наушники №456',
@@ -52,28 +32,49 @@ export const cardInfoWatchesList = [
 // mobilemenu.after(div)
 // mobilemenu.replaceWith(div)
 
-export const sellersTabCardWrapper = document
+const sellersTabCardWrapper = document
   .querySelector('.top-sell')
   .querySelectorAll('.topsell_headphoness');
-// const earphonesTabCardWrapper = document
-//   .querySelector('.earphones')
-//   .querySelector('.tab__card-wrapper');
-export const sellersTabCardWrapper2 = document
-  .querySelector('.trend')
-  .querySelectorAll('.topsell_headphoness');
+// // const earphonesTabCardWrapper = document
+// //   .querySelector('.earphones')
+// //   .querySelector('.tab__card-wrapper');
+// export const sellersTabCardWrapper2 = document
+//   .querySelector('.trend')
+//   .querySelectorAll('.topsell_headphoness');
 
-export const sellersTabBtnWrapper = document
+const sellersTabBtnWrapper = document
   .querySelector('.top-sell')
   .querySelectorAll('.btns_sell');
-export const sellersTabBtnWrapper2 = document
-  .querySelector('.trend')
-  .querySelectorAll('.btns_sell');
-export function getCards(cardInfoList, elem) {
+
+let f = sellersTabBtnWrapper[0];
+f.addEventListener('click', (event) => {
+  const target = event.target;
+
+  const ovalButtons = f.querySelectorAll('.btn_top_picks');
+
+  ovalButtons.forEach((btn) => {
+    btn.classList.remove('active');
+  });
+  console.log(target.nodeName);
+  if (target.nodeName == 'BUTTON') {
+    target.classList.add('active');
+    // sellersTabCardWrapper.replaceWith('')
+  }
+  if (target.innerText == 'Watches') {
+    deletetab('top-sell');
+    // getCards(cardInfoTopPicksList, sellersTabCardWrapper[0]);
+  } else {
+    deletetab('top-sell');
+    getCards(cardInfoWatchesList, sellersTabCardWrapper[0]);
+  }
+});
+
+function getCards(cardInfoList, elem) {
   const arr = cardInfoList.forEach((cardInfo) => {
     const tab = `<div class="headphones">
     <div class="headphones1_inside inside">
       <img class="img1 img_sell1 img_sell" src="../src/png/${cardInfo.image}" alt="">
-      <div class="skidka60 skidka"><p class="p_skidka">Save 60 <br>%</p></div>
+    <div class="skidka60 skidka"><p class="p_skidka">Save 60 <br>%</p></div>
       <div class="price_sell">
         <p class="p_price">${cardInfo.cardTitle}</p>
         <div class="sell_rew">
@@ -97,7 +98,7 @@ export function getCards(cardInfoList, elem) {
   });
 }
 
-export function deletetab(m) {
+function deletetab(m) {
   const tabs = document.querySelector(`.${m}`).querySelectorAll('.headphones');
   // console.log(tabs);
   for (let x of tabs) {
