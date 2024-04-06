@@ -1,3 +1,4 @@
+import star6 from '../png/Star6.png';
 // "beforebegin" – вставить html непосредственно перед elem,
 // "afterbegin" – вставить html в начало elem,
 // "beforeend" – вставить html в конец elem,
@@ -24,7 +25,7 @@
 // const sellersTabBtnWrapper = document
 //   .querySelector('.top-sell')
 //   .querySelectorAll('.btns_sell');
-
+import addtoCard from './service/add-to-cart.js';
 export default function tabs(tabNames, dataCards, tabContainerElement) {
   // tabNames - string[]
   // dataCards - {
@@ -56,35 +57,35 @@ export default function tabs(tabNames, dataCards, tabContainerElement) {
     });
     target.classList.add('active');
 
-    tabNames.forEach((tab, index) => {
+    tabNames.forEach((tab) => {
       if (tab == target.innerText) {
         deletetab(tabContainerElement);
-        getCards(dataCards[index], tabCardWrapper);
+        getCards(dataCards, tabCardWrapper);
       }
     });
   });
 }
-
+import image12 from '../png/image 12.png';
 function getCards(cardInfoList, elem) {
   const arr = cardInfoList.forEach((cardInfo) => {
     const tab = `<div class="headphones">
     <div class="headphones1_inside inside">
-      <img class="img1 img_sell1 img_sell" src="../src/png/${cardInfo.image}" alt="">
+      <img class="img1 img_sell1 img_sell" src="${image12}" alt="">
     <div class="skidka60 skidka"><p class="p_skidka">Save 60 <br>%</p></div>
       <div class="price_sell">
         <p class="p_price">${cardInfo.cardTitle}</p>
         <div class="sell_rew">
         <div class="star_red">
-        <img src="../src/png/Star 6.png" alt="">
-        <img src="../src/png/Star 6.png" alt="">
-        <img src="../src/png/Star 6.png" alt="">
-        <img src="../src/png/Star 6.png" alt="">
-        <img src="../src/png/Star 6.png" alt="">
+        <img src="${star6}" alt="">
+        <img src="${star6}" alt="">
+        <img src="${star6}" alt="">
+        <img src="${star6}" alt="">
+        <img src="${star6}" alt="">
       </div>
       <p class="p_reviews">${cardInfo.reviews}</p>
     
        </div>
-      <p class="p_price_sell">$${cardInfo.price}</p>
+      <p class="p_price_sell">${cardInfo.price}</p>
     </div>
     </div>
     <button class="btn_add_sells">Add to cart</button>

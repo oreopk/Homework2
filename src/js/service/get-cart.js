@@ -1,4 +1,4 @@
-export default async function getHeadphones() {
+export default async function getCart() {
   //   let xhr = new XMLHttpRequest();
   //   xhr.open('GET', 'http://localhost:8000/headphones');
   //   xhr.send();
@@ -16,19 +16,15 @@ export default async function getHeadphones() {
   //     // event.total;
   //   };
   //   return res;
-
+  let data = [];
   try {
-    let response = await fetch('http://localhost:8000/headphones/get-list');
+    let response = await fetch('http://localhost:8000/cart/get');
     // response.then((res) => {
     //   res.json().then((data) => console.log(data));
     // });
     if (response.ok) {
       console.log(`Загружено с статусом ${response.status}`);
-      let data1 = response;
-      console.log(data1);
-      let data = await data1.json();
-      console.log(data);
-      return data;
+      data = await response.json();
     }
   } catch {
     throw new Error('Возникла ошибка');

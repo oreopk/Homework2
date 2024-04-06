@@ -47,10 +47,9 @@ class Header extends ElemHTML {
         </div>
         `
     );
-    console.log('PROVERKA');
   }
-  createHeader() {
-    this.render('body');
+  createHeader(place) {
+    this.render(place);
   }
 }
 

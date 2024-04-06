@@ -22,15 +22,11 @@ module.exports = (env) => {
           test: /\.s[ac]ss$/i,
           use: ['style-loader', 'css-loader', 'sass-loader'],
         },
-
         {
-          test: /\.{png|jpe?g|gif|svg}$/i,
-          use: [
-            {
-              loader: 'file-loader',
-            },
-          ],
+          test: /\.(png|jpg|jpeg|gif|svg)$/i,
+          type: 'asset/resource',
         },
+
         {
           test: /\.html$/,
           use: ['html-loader'],
